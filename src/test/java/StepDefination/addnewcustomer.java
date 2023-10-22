@@ -2,31 +2,32 @@ package StepDefination;
 
 import org.openqa.selenium.WebDriver;
 
+import Pageobject.AddcustomerPage;
 import Pageobject.addnewcustomer1;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class addnewcustomer {
 
-	WebDriver driver;
+	public WebDriver driver;
 
-	addnewcustomer1 ad;
+	AddcustomerPage ad= new AddcustomerPage(driver);
 
 	@When("User click on customer Menu")
 	public void user_click_on_customer_menu() {
-		ad.clickoncustomermenu();
+		ad.ClickCutomerMenu();
 
 	}
 
 	@When("click on customer Menu item")
 	public void click_on_customer_menu_item() {
-		ad.customermenu();
+		ad.ClickCustomerMenuItem();
 	}
 
 	@When("click on Add new button")
 	public void click_on_add_new_button() {
 
-		ad.menuitemadd();
+		ad.Addnew();
 	}
 
 	@Then("User can view Add new customer page")
@@ -46,13 +47,22 @@ public class addnewcustomer {
 	@When("user enter customer page")
 	public void user_enter_customer_page() {
 
-		ad.enterdetails("shivam34@mail.com", "12345", "shiavm", "srivastava");
+		ad.setEmail("shivam@mail.com");
+
+		ad.setDob("15/06/1999");
+
+		ad.setFirstname("shivam");
+
+		ad.setGender("male");
+		ad.setLname("srivastava");
+
+		ad.setPassword("1234");
 
 	}
 
 	@When("click on save button")
 	public void click_on_save_button() {
-		ad.clickonsavebtn();
+		ad.clickonsave();
 	}
 
 	@Then("close browser")
