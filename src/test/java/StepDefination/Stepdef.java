@@ -32,8 +32,10 @@ public class Stepdef {
 	}
 
 	@When("User opens url {string}")
-	public void user_opens_url(String url) {
+	public void user_opens_url(String url) throws InterruptedException {
 		driver.get(url);
+		driver.manage().window().maximize();
+		Thread.sleep(3000);
 	}
 
 	@When("User enter Email as {string} and Password as {string}")
