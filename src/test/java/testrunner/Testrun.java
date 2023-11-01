@@ -11,7 +11,7 @@ import io.cucumber.junit.CucumberOptions;
 glue = "StepDefination", 
 dryRun = false, monochrome = false,
 plugin = {
-		"pretty", "html:target/Cucumber-report/login.html" })
+		"pretty", "html:target/Cucumber-report/customer.html" })
 
 //the cucumber file will always be empty
 public class Testrun {

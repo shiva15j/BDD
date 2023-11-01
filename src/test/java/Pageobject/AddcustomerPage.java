@@ -33,9 +33,9 @@ public class AddcustomerPage {
 
 	By txtradio = By.name("Gender");
 
-	By rdMalegender = By.xpath("Gender_Male");
+	By rdMalegender = By.xpath("//*[@id=\"Gender_Male\"]");
 
-	By rdFemalegender = By.xpath("Gender_Female");
+	By rdFemalegender = By.xpath("//*[@id=\"Gender_Male\"]");
 
 	By txtdob = By.name("DateOfBirth");
 
