@@ -16,5 +16,4 @@ plugin = {
 //the cucumber file will always be empty
 public class Testrun {
 	
-
 }

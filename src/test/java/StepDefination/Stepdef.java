@@ -109,7 +109,7 @@ public class Stepdef {
 
 	@When("user enter customer page")
 	public void user_enter_customer_page() {
-		ad.setEmail("shivam@mail.com");
+		ad.setEmail("shivam12@mail.com");
 
 		ad.setPassword("1234");
 
