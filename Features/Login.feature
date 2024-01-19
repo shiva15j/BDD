@@ -18,7 +18,7 @@
 #Sample Feature Definition Template
 Feature: LOGIN	
 
-  
+
   Scenario: Verify User is able to login with correct credentials
     Given user Launch Chrome Browser 
     When User opens url "https://admin-demo.nopcommerce.com/login"
