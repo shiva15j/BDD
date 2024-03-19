@@ -5,7 +5,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import Pageobject.AddcustomerPage;
-import Pageobject.Loginpage;
+import Pageobject.LoginPages;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -15,7 +16,7 @@ public class Stepdef {
 
 	public WebDriver driver;
 
-	public Loginpage l;
+	public LoginPages l;
 
 	public AddcustomerPage ad;
 
@@ -27,7 +28,7 @@ public class Stepdef {
 
 		driver = new ChromeDriver(options);
 
-		l = new Loginpage(driver);
+		l = new LoginPages(driver);
 		ad = new AddcustomerPage(driver);
 	}
 
@@ -40,7 +41,9 @@ public class Stepdef {
 
 	@When("User enter Email as {string} and Password as {string}")
 	public void user_enter_email_as_and_password_as(String mail, String pwd) {
+		
 		l.enterEmail(mail);
+		
 		l.enterPassword(pwd);
 
 	}

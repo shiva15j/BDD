@@ -7,6 +7,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class AddcustomerPage {
 
+	// Pojo Class ;- Plain old java object
+
 	public WebDriver ldriver;
 
 	public AddcustomerPage(WebDriver driver) {
