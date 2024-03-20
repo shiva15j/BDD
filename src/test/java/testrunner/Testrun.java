@@ -7,13 +7,14 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 
-@CucumberOptions(features = ".//Features/customer.feature", 
-glue = "StepDefination", 
-dryRun = false, monochrome = false,
-plugin = {
-		"pretty", "html:target/Cucumber-report/CustomerNew.html" })
+@CucumberOptions(features = { ".//Features" }, glue = "StepDefination", dryRun = false, monochrome = false, plugin = {
+		"pretty", "html:target/Cucumber-report/CustomerNew.html" },
+
+		tags = "@regression"
+
+)
 
 //the cucumber file will always be empty
 public class Testrun {
-	
+
 }

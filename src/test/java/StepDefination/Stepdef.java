@@ -3,6 +3,8 @@ package StepDefination;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 
 import Pageobject.AddcustomerPage;
 import Pageobject.LoginPages;
@@ -23,9 +25,21 @@ public class Stepdef {
 	@Given("user Launch Chrome Browser")
 	public void user_launch_chrome_browser() {
 		ChromeOptions options = new ChromeOptions();
+		// options.addArguments("--remote-allow-origins=*");
+		options.setHeadless(false);
+		options.addArguments("start-maximized"); // open Browser in maximized mode
+		options.addArguments("disable-infobars"); // disabling infobars
+		options.addArguments("--disable-extensions"); // disabling extensions
+		options.addArguments("--disable-gpu"); // applicable to Windows os only
+		options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+		options.addArguments("--no-sandbox"); // Bypass OS security model
+		options.addArguments("--disable-in-process-stack-traces");
+		options.addArguments("--disable-logging");
+		options.addArguments("--log-level=3");
 		options.addArguments("--remote-allow-origins=*");
+//		System.setProperty("webdriver.chrome.driver",
+//				"C:\\Users\\shiva\\eclipse-workspace\\com.bddFrameworks1\\Driver\\chromedriver.exe");
 		WebDriverManager.chromedriver().setup();
-
 		driver = new ChromeDriver(options);
 
 		l = new LoginPages(driver);
@@ -41,9 +55,9 @@ public class Stepdef {
 
 	@When("User enter Email as {string} and Password as {string}")
 	public void user_enter_email_as_and_password_as(String mail, String pwd) {
-		
+
 		l.enterEmail(mail);
-		
+
 		l.enterPassword(pwd);
 
 	}

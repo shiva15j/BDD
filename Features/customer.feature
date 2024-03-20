@@ -19,7 +19,7 @@
 
 Feature: Customer
  
-
+@regression
 Scenario: Add new Customer
 
  Given user Launch Chrome Browser 

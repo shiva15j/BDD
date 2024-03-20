@@ -1,0 +1,6 @@
+Pageobject\LoginPages.class
+testrunner\Testrun.class
+Pageobject\AddcustomerPage.class
+Pageobject\Loginpage.class
+StepDefination\Stepdef.class
+Pageobject\addnewcustomer1.class
