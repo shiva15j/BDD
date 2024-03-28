@@ -19,9 +19,9 @@
 
 Feature: Customer
  
+
 @regression
 Scenario: Add new Customer
-
  Given user Launch Chrome Browser 
  When User opens url "https://admin-demo.nopcommerce.com/login"
  And  User enter Email as "admin@yourstore.com" and Password as "admin"

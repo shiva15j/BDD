@@ -25,7 +25,7 @@ public class Stepdef {
 	@Given("user Launch Chrome Browser")
 	public void user_launch_chrome_browser() {
 		ChromeOptions options = new ChromeOptions();
-		// options.addArguments("--remote-allow-origins=*");
+		options.addArguments("--remote-allow-origins=*");
 
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver(options);
@@ -71,7 +71,7 @@ public class Stepdef {
 
 	@When("User click on the log out link")
 	public void user_click_on_the_log_out_link() {
-		l.getClass();
+		l.clickOnLogOutButton();
 	}
 
 	@When("Close the Browser")

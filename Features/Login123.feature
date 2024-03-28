@@ -19,7 +19,7 @@
 Feature: LOGIN	
 
 
- @sanity  
+@sanity
   Scenario: Verify User is able to login with correct credentials
     Given user Launch Chrome Browser 
     When User opens url "https://admin-demo.nopcommerce.com/login"
@@ -30,7 +30,7 @@ Feature: LOGIN
     And  Close the Browser
     
     
-    @regression
+   
     Scenario Outline: Data Driven
     Given user Launch Chrome Browser 
     When User opens url "https://admin-demo.nopcommerce.com/login"
