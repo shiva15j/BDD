@@ -69,10 +69,11 @@ public class Stepdef {
 		}
 	}
 
-	@When("User click on the log out link")
-	public void user_click_on_the_log_out_link() {
-		l.clickOnLogOutButton();
-	}
+//	@When("User click on the log out link")
+//	public void user_click_on_the_log_out_link() throws InterruptedException {
+//		Thread.sleep(3000);
+//		l.clickOnLogOutButton();
+//	}
 
 	@When("Close the Browser")
 	public void close_the_browser() {
@@ -88,7 +89,8 @@ public class Stepdef {
 	}
 
 	@When("click on customer Menu item")
-	public void click_on_customer_menu_item() {
+	public void click_on_customer_menu_item() throws InterruptedException {
+		Thread.sleep(2000);
 		ad.ClickCustomerMenuItem();
 	}
 

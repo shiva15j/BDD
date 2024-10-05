@@ -9,9 +9,10 @@ import io.cucumber.junit.CucumberOptions;
 
 @CucumberOptions(features = { ".//Features" }, 
 glue = "StepDefination", 
-dryRun = false, monochrome = true,
+dryRun = false, 
+monochrome = false,
 plugin = {
-		"pretty", "html:target/Cucumber-report/New.html" },
+		"pretty", "html:target/Cucumber-report/new.html" },
 
 		tags = "@regression"
 

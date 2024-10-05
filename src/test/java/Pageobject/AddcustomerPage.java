@@ -37,7 +37,7 @@ public class AddcustomerPage {
 
 	By rdMalegender = By.xpath("//*[@id=\"Gender_Male\"]");
 
-	By rdFemalegender = By.xpath("//*[@id=\"Gender_Male\"]");
+	By rdFemalegender = By.xpath("//*[@id=\"Gender_Female\"]");
 
 	By txtdob = By.name("DateOfBirth");
 
